@@ -1,0 +1,23 @@
+# Testing out llamama model from AWS and use lambda to invoke
+
+# Summariser in Key Points
+
+This is a simple AWS Lambda function that uses the Bedrock Runtime service to generate a summary of a given query in key points.
+
+## Prerequisites
+
+* An AWS account
+* An S3 bucket to store the generated summaries (Unique)
+* The Bedrock Runtime service set up in your AWS account
+	- Currently using meta.llama3-70b-instruct-v1:0
+	- Available in US-EAST-1. 
+
+## Usage
+
+To use this Lambda function, you need to:
+
+1. Create an S3 bucket to store the generated summaries.
+2. Set up the Bedrock Runtime service in your AWS account.
+3. Create a Lambda function with the provided code.
+4. Configure the Lambda function to trigger on a specific event (e.g. an API Gateway request).
+5. Test the Lambda function with a sample query.
