@@ -1,6 +1,6 @@
 # Tuition101
 
-Welcome to Tuition101, a repository dedicated to all things data science. Here, you will find a collection of projects, resources, and tutorials that will help you navigate the world of data science.
+Welcome to my brainhub for learning anything data science. 
 
 ## Projects
 
