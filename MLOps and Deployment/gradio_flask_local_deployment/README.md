@@ -19,14 +19,9 @@ List down any dependencies that your project might have. For example:
 
 ### Installing
 
-Provide step by step series of examples that tell you how to get a development environment running.
+Assuming already cloned, can simply docker compose up and build. 
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/your-repo.git
-
-# Navigate to the directory
-cd your-repo
+To access frontend please go to `localhost:7860`. Request.get() will reach out to port 5000.  
 
 # Docker compose build 
 docker-compose up -d --build 
