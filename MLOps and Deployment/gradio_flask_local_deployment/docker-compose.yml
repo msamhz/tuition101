@@ -3,7 +3,7 @@ services:
   app:
     build:
       context: ./backend
-      dockerfile: DockerFile
+      dockerfile: Dockerfile
     container_name: hello_backend
     ports:
       - "5000:5000"
@@ -13,7 +13,7 @@ services:
   web:
     build:
       context: ./frontend
-      dockerfile: DockerFile
+      dockerfile: Dockerfile
     container_name: frontend_gradio
     ports:
       - "7860:7860"

@@ -1,15 +1,20 @@
 import gradio as gr
 import requests
+from urllib.parse import urlparse
 
 def get_greeting(name):
     """Function to call the Flask API and get a greeting."""
     url = f'http://app:5000/api/greet/{name}'
     response = requests.get(url)
     
+    parsed_url = urlparse(response.request.url)
+    port = parsed_url.port
+    
     request_details = (
         f"Request URL: {response.request.url}\n"
         f"Request Headers: {response.request.headers}\n"
         f"Request Body: {response.request.body}\n"
+        f"Request Port: {port}\n"
     )
     
     if response.status_code == 200:
