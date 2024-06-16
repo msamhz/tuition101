@@ -1,10 +1,10 @@
-# Docker local deployment with Flask and Gradio
+# Docker local deployment with Flask and Gradio With Server
 
 ## Description
 
-1. Quickly deploy backend and frontend apps locally. 
-2. Understanding the use of docker compose to build microservices for the flask app and the frontend web service. 
-3. Learn to use REST API to .get() from Flask in json and print out request details 
+1. Quickly deploy backend and frontend apps on server VM. 
+2. Need to find IP address of VM using `ifconfig` or `ip addr show`
+3. Link to gradio frontend 
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ List down any dependencies that your project might have. For example:
 
 Assuming already cloned, can simply docker compose up and build. 
 
-To access frontend please go to `localhost:7860`. Request.get() will reach out to port 5000.  
+To access frontend please go to `<SERVER VM IP ADDRESS>:7860`. Request.get() will reach out to port 5000.  
 
 You can notice that the container hostname used to get the URL is the same. Next we will try NGINX. 
 
