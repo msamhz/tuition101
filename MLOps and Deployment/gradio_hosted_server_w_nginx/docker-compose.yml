@@ -1,0 +1,36 @@
+services:
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    expose: # use ports to see which docker internal ports is exposed. 
+      - "5000"
+    restart: always
+    networks:
+      - internal_net
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend_gradio
+    expose:
+      - "7860"
+    restart: always
+    networks:
+      - internal_net
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    networks:
+      - internal_net
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - web
+
+networks:
+  internal_net:
+    driver: bridge
