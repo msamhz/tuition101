@@ -14,3 +14,7 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+MLOps and Deployment/request_httpx/test.py
+MLOps and Deployment/request_httpx/test2.py
+MLOps and Deployment/request_httpx/test3.py
